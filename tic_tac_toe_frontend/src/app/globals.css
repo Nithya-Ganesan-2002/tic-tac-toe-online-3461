@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --color-primary: #1a73e8;
+  --color-accent: #34a853;
+  --color-secondary: #fbbc05;
+  --color-background: #fff;
 }
 
 * {
@@ -18,9 +18,25 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--color-background);
-  color: var(--color-primary);
+  color: #222e;
 }
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* For better accessibility, fade-in effect for main transitions */
+.fade-in {
+  animation: fadeIn 0.55s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
